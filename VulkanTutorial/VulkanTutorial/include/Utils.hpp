@@ -3,11 +3,11 @@
 
 #include <string>
 #include <iostream>
-#include <windows.h>
 #include <vector>
 #include <fstream>
 
 #ifdef _WIN32
+#include <windows.h>
 enum Color {
     RED = 12,
     GREEN = 10,
@@ -78,7 +78,7 @@ public:
         #ifdef _WIN32
         if(i)system("notepad AppLog.txt");
         #else
-        if (i)system("textedit AppLog.txt");
+        if (i)system("open -a TextEdit AppLog.txt");
         #endif
     }
 
